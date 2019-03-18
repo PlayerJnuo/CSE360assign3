@@ -108,9 +108,9 @@ public class OrderedIntList
 	
 	public int size ()
 	{
-		int size = 0;
-		size = counter;
-		return size;
+		int length = 0;
+		length = array.length;
+		return length;
 	}
 	
 	/**
@@ -121,9 +121,9 @@ public class OrderedIntList
 	
 	public int length ()
 	{
-		int length = 0;
-		length = array.length;
-		return length;
+		int size = 0;
+		size = counter;
+		return size;	
 	}
 	
 	/**
