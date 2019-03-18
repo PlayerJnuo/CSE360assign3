@@ -65,12 +65,12 @@ public class OrderedIntList
 		
 		if (size() == length())
 		{
-			int[] temp = new int[length()];
+			int[] temp = new int[size()];
 			for (int iterator = 0; iterator < size(); iterator ++)
 			{
 				temp[iterator] = array[iterator];
 			}
-			array = new int[length() + (length() / 2)];
+			array = new int[size() + (size() / 2)];
 			for (int iterator = 0; iterator < temp.length; iterator++)
 			{
 				array[iterator] = temp[iterator];
@@ -91,7 +91,7 @@ public class OrderedIntList
 		
 		if (duplicate == false)
 		{
-			for (int iterator = size(); iterator > position; iterator--)
+			for (int iterator = length(); iterator > position; iterator--)
 			{
 				array[iterator] = array[iterator - 1];
 			}
@@ -101,29 +101,29 @@ public class OrderedIntList
 	}
 	
 	/**
-	 * Returns the amount of values in the array.
-	 * 
-	 * @return the amount of values in the array.
-	 */
-	
-	public int size ()
-	{
-		int length = 0;
-		length = array.length;
-		return length;
-	}
-	
-	/**
 	 * Returns the length the array.
 	 * 
 	 * @return the length of th array.
 	 */
 	
-	public int length ()
+	public int size ()
 	{
 		int size = 0;
-		size = counter;
-		return size;	
+		size = array.length;
+		return size;
+	}
+	
+	/**
+	 * Returns the amount of values in the array.
+	 * 
+	 * @return the amount of values in the array.
+	 */
+	
+	public int length ()
+	{
+		int length = 0;
+		length = counter;
+		return length;
 	}
 	
 	/**
@@ -137,27 +137,27 @@ public class OrderedIntList
 	
 	public void delete (int key)
 	{
-		for (int iterator = 0; iterator < size(); iterator++)
+		for (int iterator = 0; iterator < length(); iterator++)
 		{
 			if (array[iterator] ==  key)
 			{
-				for (int position = iterator; position < size() - 1; position++)
+				for (int position = iterator; position < length() - 1; position++)
 				{
 					array[position] = array[position + 1];
 				}
-				array[size() - 1] = 0;
+				array[length() - 1] = 0;
 				counter--;
 			}
 		}
 			
-		if (size() == (length() / 2))
+		if (length() == (size() / 2))
 		{
-			int[] temp = new int[length()];
+			int[] temp = new int[size()];
 			for (int iterator = 0; iterator < size(); iterator ++)
 			{
 				temp[iterator] = array[iterator];
 			}
-			array = new int[(length() / 2)];
+			array = new int[(size() / 2)];
 			for (int iterator = 0; iterator < array.length; iterator++)
 			{
 				array[iterator] = temp[iterator];
