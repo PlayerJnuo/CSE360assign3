@@ -34,59 +34,59 @@ class OrderedIntListTest
 	}
 	
 	// makes a new OrderedIntList called original
-	// checks size
-	// result: size will be size 0
+	// checks length
+	// result: length will be size 0
 	
 	@Test
-	void testSizeInitial() 
+	void testLengthInitial() 
 	{
 		original = new OrderedIntList();
 		int expected = 0;
-		assertEquals(expected, original.size());
+		assertEquals(expected, original.length());
 	}
 	
 	// makes a new OrderedIntList called original
 	// inserts a value, then checks size
-	// result: size will be size 1
+	// result: length will be length 1
 	
 	@Test
-	void testSizePost() 
+	void testLengthPost() 
 	{
 		original = new OrderedIntList();
 		original.insert(1);
 		int expected = 1;
-		assertEquals(expected, original.size());
+		assertEquals(expected, original.length());
 	}
 	
 	// makes a new OrderedIntList called original
-	// checks length
-	// result: length will be 10
+	// checks size
+	// result: size will be 10
 	
 	@Test
-	void testLengthOriginal() 
+	void testSizeOriginal() 
 	{
 		original = new OrderedIntList();
-		assertEquals(10,original.length());
+		assertEquals(10,original.size());
 	}
 	
 	// makes a new OrderedIntList called overLoaded
-	// with length 4, checks length
-	// result: length will be 4
+	// with size 4, checks size
+	// result: size will be 4
 	
 	@Test
-	void testLengthWithVarInt() 
+	void testSizeWithVarInt() 
 	{
 		varInt = 4;
 		overLoaded = new OrderedIntList(varInt);
-		assertEquals(varInt,overLoaded.length());
+		assertEquals(varInt,overLoaded.size());
 	}
 	
 	// makes a new OrderedIntList called overLoaded
-	// with length 4, inserts 5 numbers, checks length
-	// result: length will be 6
+	// with size 4, inserts 5 numbers, checks size
+	// result: size will be 6
 	
 	@Test
-	void testLengthInsertIncrement() 
+	void testLengthSizeIncrement() 
 	{
 		varInt = 4;
 		overLoaded = new OrderedIntList(varInt);
@@ -96,16 +96,16 @@ class OrderedIntListTest
 		overLoaded.insert(4);
 		overLoaded.insert(5);
 		int expected = 6;
-		assertEquals(expected, overLoaded.length()); 
+		assertEquals(expected, overLoaded.size()); 
 	}
 	
 	// makes a new OrderedIntList called overLoaded
-	// with length 4, inserts 3 numbers, and deletes 1
-	// number, checks length
-	// result: length will be 2
+	// with size 4, inserts 3 numbers, and deletes 1
+	// number, checks size
+	// result: size will be 2
 	
 	@Test
-	void testLengthDeleteDecrement() 
+	void testSizeDeleteDecrement() 
 	{
 		varInt = 4;
 		overLoaded = new OrderedIntList(varInt);
@@ -114,11 +114,11 @@ class OrderedIntListTest
 		overLoaded.insert(3);		
 		overLoaded.delete(1);
 		int expected = 2;
-		assertEquals(expected, overLoaded.length()); 
+		assertEquals(expected, overLoaded.size()); 
 	}
 	
 	// makes a new OrderedIntList called overLoaded
-	// with length 4, inserts 1 numbers, checks contents
+	// with size 4, inserts 1 numbers, checks contents
 	// result: contents will be "2"
 	
 	@Test
@@ -132,7 +132,7 @@ class OrderedIntListTest
 	}
 	
 	// makes a new OrderedIntList called overLoaded
-	// with length 4, inserts 4 numbers in order, 
+	// with size 4, inserts 4 numbers in order, 
 	// checks contents
 	// result: contents will be "1 2 3 4"
 	
@@ -150,7 +150,7 @@ class OrderedIntListTest
 	}
 	
 	// makes a new OrderedIntList called overLoaded
-	// with length 4, inserts 4 numbers out of order, 
+	// with size 4, inserts 4 numbers out of order, 
 	// checks contents
 	// result: contents will be "1 2 3 4"
 	
@@ -168,7 +168,7 @@ class OrderedIntListTest
 	}
 	
 	// makes a new OrderedIntList called overLoaded
-	// with length 4, inserts 5 numbers, 
+	// with size 4, inserts 5 numbers, 
 	// checks contents
 	// result: contents will be "1 2 3 4 5"
 
@@ -187,7 +187,7 @@ class OrderedIntListTest
 	}
 	
 	// makes a new OrderedIntList called overLoaded
-	// with length 4, inserts 4 numbers, deletes the
+	// with size 4, inserts 4 numbers, deletes the
 	// first number, checks contents
 	// result: contents will be "2 3 4"
 	
@@ -206,7 +206,7 @@ class OrderedIntListTest
 	}
 	
 	// makes a new OrderedIntList called overLoaded
-	// with length 4, inserts 5 numbers, deletes the
+	// with size 4, inserts 5 numbers, deletes the
 	// last number, checks contents
 	// result: contents will be "1 2 3"
 	
@@ -225,7 +225,7 @@ class OrderedIntListTest
 	}
 	
 	// makes a new OrderedIntList called overLoaded
-	// with length 4, inserts 5 numbers, deletes a
+	// with size 4, inserts 5 numbers, deletes a
 	// middle number, checks contents
 	// result: contents will be "1 2 4"
 	
@@ -244,7 +244,7 @@ class OrderedIntListTest
 	}
 	
 	// makes a new OrderedIntList called overLoaded
-	// with length 4, inserts 3 numbers, deletes
+	// with size 4, inserts 3 numbers, deletes
 	// a number, checks contents
 	// result: contents will be "2 3"
 	
@@ -262,7 +262,7 @@ class OrderedIntListTest
 	}
 
 	// makes a new OrderedIntList called overLoaded
-	// with length 4 checks contents
+	// with size 4 checks contents
 	// result: contents will be ""
 	
 	@Test
