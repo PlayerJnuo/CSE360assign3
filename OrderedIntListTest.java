@@ -22,7 +22,7 @@ class OrderedIntListTest
 	}
 
 	// makes a new OrderedIntList called overLoaded
-	// with length 4
+	// with size 4
 	// result: overloaded will be no longer null	
 	
 	@Test
@@ -46,7 +46,7 @@ class OrderedIntListTest
 	}
 	
 	// makes a new OrderedIntList called original
-	// inserts a value, then checks size
+	// inserts a value, then checks length
 	// result: length will be length 1
 	
 	@Test
@@ -71,7 +71,7 @@ class OrderedIntListTest
 	
 	// makes a new OrderedIntList called overLoaded
 	// with size 4, checks size
-	// result: size will be 4
+	// result: length will be 4
 	
 	@Test
 	void testSizeWithVarInt() 
@@ -86,7 +86,7 @@ class OrderedIntListTest
 	// result: size will be 6
 	
 	@Test
-	void testLengthSizeIncrement() 
+	void testSizeInsertIncrement() 
 	{
 		varInt = 4;
 		overLoaded = new OrderedIntList(varInt);
@@ -102,7 +102,7 @@ class OrderedIntListTest
 	// makes a new OrderedIntList called overLoaded
 	// with size 4, inserts 3 numbers, and deletes 1
 	// number, checks size
-	// result: size will be 2
+	// result: length will be 2
 	
 	@Test
 	void testSizeDeleteDecrement() 
@@ -262,11 +262,11 @@ class OrderedIntListTest
 	}
 
 	// makes a new OrderedIntList called overLoaded
-	// with size 4 checks contents
+	// with length 4 checks contents
 	// result: contents will be ""
 	
 	@Test
-	void testToStringEmpty() 
+	void testToStringEmpty()
 	{
 		varInt = 4;
 		overLoaded = new OrderedIntList(varInt);
